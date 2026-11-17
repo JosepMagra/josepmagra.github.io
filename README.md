@@ -1,27 +1,32 @@
-# Web personal de Josep Magraner
+# josepmagra.dev
 
-Portfolio estático, en inglés y español, listo para GitHub Pages.
+Source of my personal site: **[josepmagra.dev](https://josepmagra.dev)**.
 
-## Verla en local
+I'm Josep Magraner, a Data Science graduate from UPV (València). The site collects my projects, my CV and how to reach me, in English and Spanish.
 
-Los scripts son módulos de JavaScript, así que hace falta un servidor (abrir el archivo con doble clic no basta):
+## Projects on the site
 
-    python -m http.server 8000
+- **Macu Apps**: custom apps for personal trainers. Next.js, PostgreSQL and Supabase on my own Linux server.
+- **finance-copilot**: the offline-first PWA I use to track my money. Python standard library and SQLite.
+- **Rebuilding gaps in energy data**: my thesis (10/10), a hybrid system that rebuilds missing meter data so it matches the energy the meter recorded.
+- **Energy forecasting for food plants**: demand and solar forecasts from 24 hours up to two weeks ahead, built during my internship at the IUIIE (UPV).
 
-y abrir http://localhost:8000.
+## How it's built
 
-## Publicarla
+A static site with no framework and no build step: plain HTML, CSS and JavaScript modules, served by GitHub Pages.
 
-Subir el contenido de esta carpeta a la raíz del repositorio de GitHub Pages (`josepmagra.github.io`) y activar Pages en la rama principal.
+- Every text has an English and a Spanish version, and `js/lang.js` switches between them.
+- `js/video.js` only plays the videos while they're on screen and respects reduced motion.
+- `assets/` holds the parts of the [taste-skill](assets/LICENSE-taste-skill.txt) design kit that the site uses (MIT licence).
 
-## Qué hay en cada sitio
+To run it locally, serve the folder (the scripts are ES modules, so opening the file directly won't work):
 
-- `index.html`: portada (presentación, proyectos, sobre mí, cómo trabajo, contacto).
-- `projects/`: un caso de estudio por proyecto.
-- `css/site.css`: colores, tipografía y estilos propios de la web.
-- `js/lang.js`: el botón EN / ES. Cada texto lleva sus dos versiones, `<span class="en">` y `<span class="es">`.
-- `js/video.js`: los vídeos solo se reproducen mientras están en pantalla, y no se mueven si el visitante pidió menos movimiento.
-- `media/`: los dos vídeos de las apps reales (grabados con datos de ejemplo) y sus imágenes de portada.
-- `cv/`: el CV genérico en PDF, en inglés y en español.
-- `img/`: la foto.
-- `assets/`: las piezas del kit de taste-skill que usa la web (licencia MIT, en `assets/LICENSE-taste-skill.txt`).
+```bash
+python -m http.server 8000
+```
+
+## Contact
+
+[LinkedIn](https://www.linkedin.com/in/josepmagra) · [GitHub](https://github.com/JosepMagra) · josepmagra@gmail.com
+
+The code in `assets/` is MIT-licensed. The rest of the content (texts, photo, videos and CV) is mine, all rights reserved.
