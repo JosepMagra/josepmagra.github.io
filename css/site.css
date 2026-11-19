@@ -183,8 +183,7 @@ html[data-lang="en"] .es, html[data-lang="es"] .en { display: none !important; }
 .shots--light .shot__img { background: #f3f4f6; }
 .shots--phone .shot__img { aspect-ratio: 600 / 1298; }
 .shots--wide .shot__img { aspect-ratio: 1016 / 948; }
-.shot__img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .4s ease; }
-.shot__img:hover img { transform: scale(1.015); }
+.shot__img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .shot figcaption h3 { margin: 0 0 6px; font-size: 18px; }
 .shot figcaption p { margin: 0; font-size: var(--t-small); color: var(--muted); max-width: none; }
 .shots__note { margin: var(--s-5) 0 0; color: var(--muted); font-size: var(--t-small); }
@@ -193,4 +192,3 @@ html[data-lang="en"] .es, html[data-lang="es"] .en { display: none !important; }
   .p-body ul.shots { gap: var(--s-6) var(--s-4); }
   .shots--wide { grid-template-columns: minmax(0, 1fr); }
 }
-@media (prefers-reduced-motion: reduce) { .shot__img img { transition: none; } .shot__img:hover img { transform: none; } }
