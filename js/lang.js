@@ -7,6 +7,10 @@
     html.setAttribute('data-lang', l);
     html.setAttribute('lang', l);
     if (titles[l]) document.title = titles[l];
+    // an image's alt text can't be hidden with CSS like the spans, so it is swapped
+    document.querySelectorAll('[data-alt-' + l + ']').forEach(function (img) {
+      img.setAttribute('alt', img.getAttribute('data-alt-' + l));
+    });
     document.querySelectorAll('[data-set-lang]').forEach(function (b) {
       b.setAttribute('aria-pressed', String(b.getAttribute('data-set-lang') === l));
     });
